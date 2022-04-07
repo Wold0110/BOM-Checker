@@ -11,110 +11,10 @@
     <!-- css -->
     <link href="style.css" rel="stylesheet" type="text/css" media="screen">
     <link href="color.css" rel="stylesheet" type="text/css" media="screen">
-    <script>
-        function prod(action){
-            switch(action){
-                case 'new':
-                    var newname = document.getElementById("newprod").value;
-                    var msg = "op=new&name="+newname;
-                    xmlhttp = new XMLHttpRequest();
-                    xmlhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                            var msg = this.responseText;
-                            console.log(msg);
-                        }
-                    };
-                    xmlhttp.open("POST","prod_ajax.php",true);
-                    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                    xmlhttp.send(msg);
-                    
-                    break;
-                case 'del':
-                    var todel = document.getElementById("oldprod").value;
-                    var msg = "op=del&id="+todel;
-                    xmlhttp = new XMLHttpRequest();
-                    xmlhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                            var msg = this.responseText;
-                            console.log(msg);
-                        }
-                    };
-                    xmlhttp.open("POST","prod_ajax.php",true);
-                    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                    xmlhttp.send(msg);
-                    break;
-            }
-        }
-        function parttype(action){
-            switch(action){
-                case 'new':
-                    var newname = document.getElementById("newpart").value;
-                    var msg = "op=new&name="+newname;
-                    xmlhttp = new XMLHttpRequest();
-                    xmlhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                            var msg = this.responseText;
-                            console.log(msg);
-                        }
-                    };
-                    xmlhttp.open("POST","part_ajax.php",true);
-                    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                    xmlhttp.send(msg);
-                    
-                    break;
-                case 'del':
-                    var todel = document.getElementById("oldpart").value;
-                    var msg = "op=del&id="+todel;
-                    xmlhttp = new XMLHttpRequest();
-                    xmlhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                            var msg = this.responseText;
-                            console.log(msg);
-                        }
-                    };
-                    xmlhttp.open("POST","part_ajax.php",true);
-                    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                    xmlhttp.send(msg);
-                    break;
-            }
-        }
-
-        function bom(action){
-            var prod = document.getElementById("bom_prod").value;
-            var type = document.getElementById("bom_type").value;
-            var name = document.getElementById("bom_name").value;
-            
-            switch(action){
-                case 'new':
-                    var msg = "op=new&prod="+prod+"&type="+type+"&name="+name;
-                    xmlhttp = new XMLHttpRequest();
-                    xmlhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                            var msg = this.responseText;
-                            console.log(msg);
-                        }
-                    };
-                    xmlhttp.open("POST","bom_ajax.php",true);
-                    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                    xmlhttp.send(msg);
-                    
-                    break;
-                case 'del':
-                    var msg = "op=del&prod="+prod+"&type="+type+"&name="+name;
-                    xmlhttp = new XMLHttpRequest();
-                    xmlhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                            var msg = this.responseText;
-                            console.log(msg);
-                        }
-                    };
-                    xmlhttp.open("POST","bom_ajax.php",true);
-                    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                    xmlhttp.send(msg);
-                    break;
-            }
-        }
-    </script>
+    
+    <!-- custom css -->
+    <script src="js/ajax.js"></script> 
+    
     <title>Főoldal</title>
 </head>
 <body>
@@ -149,30 +49,28 @@
         <div class="row">
             <!-- products -->
             <div class="col-4">
-                <h4>Új termék felvitele</h4>
-                <input type="text" name="newprod" id="newprod">
-                <br>
-                <br>
-                <input type="button" value="Új termék létrehozás" onclick="prod('new')">
-                
-                <br>
-                <br>
-                <br>
-                <br>
-                <select name="oldprod" id="oldprod">
-                    <?php
-                        require_once("sql.php");
-                        $sql = "SELECT `id`,`name` FROM quality_web.products;";
-                        $res = $mysql->query($sql);
-                        while($row = $res->fetch_assoc()){
-                            echo "<option value='".$row['id']."' id='prod".$row['id']."'>".$row['name']."</option>";
-                        }
-                    ?>
-                </select>
-                <br>
-                <br>
-                <input type="button" value="Törlés" onclick="prod('del')">
-                
+                <form>
+                    <h4>Product managment</h4>
+                    <div class="form-group">
+                        <label class="col-form-label" for="newprod">Type the new produts reference/name</label>
+                        <input class="form-control" placeholder="EEE114569" type="text" name="newprod" id="newprod">
+                        <input class="form-control btn btn-primary btn-block" type="button" value="Add" onclick="prod('new')">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-select" name="oldprod" id="oldprod">
+                        <?php
+                            require_once("sql.php");
+                            $sql = "SELECT `id`,`name` FROM quality_web.products;";
+                            $res = $mysql->query($sql);
+                            while($row = $res->fetch_assoc()){
+                                echo "<option value='".$row['id']."' id='prod".$row['id']."'>".$row['name']."</option>";
+                            }
+                        ?>
+
+                        <input class="form-control btn btn-primary btn-block" type="button" value="Törlés" onclick="prod('del')">
+                        </select>
+                    </div>
+                </form>
             </div>
 
             <!-- parts -->
