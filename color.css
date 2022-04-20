@@ -50,26 +50,28 @@ hr{
 table.table{
     color:#ffffff;
 }
+input.btn-block{
+    margin: 0px;
+    margin-top: 1vh;
+    padding: 0px;
+}
 input.btn-primary{
-    background-color: #5d7434;
-    background-image: url("../images/button.png");
+    background-color: black;
     background-repeat: no-repeat;
     background-size: 100% 5vh;
     color:white;
 }
 input.btn-primary:hover{
-    background-color: #5d7434;
-    color:#E4FFAF;
+    background-color:#99cf2c;
+    color:black;
 }
 a.btn-primary{
-    background-color: #5d7434;
-    background-image: url("../images/button.png");
+
     background-repeat: no-repeat;
     background-size: 100% 5vh;
     color:white;
 }
 a.btn-primary:hover{
-    background-color: #5d7434;
     color:#E4FFAF;
 }
 
