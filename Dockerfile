@@ -5,8 +5,8 @@ LABEL maintainer="walter20020110@gmail.com"
 ENV WEB=/var/www/html
 
 #proxy for SE
-ENV http_proxy=http://165.225.200.15:80
-ENV https_proxy=http://165.225.200.15:80
+#ENV http_proxy=http://165.225.200.15:80
+#ENV https_proxy=http://165.225.200.15:80
 
 #update
 RUN apt update && apt upgrade -y
