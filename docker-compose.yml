@@ -7,6 +7,8 @@ services:
       - "80:80"
     volumes:
       - webcontent:/var/www/html
+    links:
+      - "database:database"
   database:
     image: mysql
     command: --default-authentication-plugin=mysql_native_password
@@ -17,7 +19,7 @@ services:
       MYSQL_USER: quality
       MYSQL_PASSWORD: Qu4l1ty
     volumes:
-      - ./sql:/docker-entrypoint-initdb.d
+      - .\sql:/docker-entrypoint-initdb.d
       - sql-data:/var/lib/mysql
     ports:
       - "3306:3306"

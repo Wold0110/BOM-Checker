@@ -16,5 +16,3 @@ timestamps
     product_id  -   int
     timestamp   -   datetime
 </pre>
-
-* https://onexlab-io.medium.com/docker-compose-mysql-entry-point-fa6335346791
