@@ -35,7 +35,9 @@
         </nav>
     </header>
     <!-- #endregion -->
+
     
+
     <!-- #region concent -->
     <div class="container-fluid">
         <div class="row">
@@ -58,8 +60,6 @@
                     <br>
                     <label class="col-form-label" for="code_input">Type the product REF</label>
                     <input class="form-control" type='text' onkeypress='return enter_code(event)' id='code_input'>
-
-                    
                 </form>
                 
             </div>
