@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  website:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - webcontent:/var/www/html
+  database:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: asd12345
+      MYSQL_DATABASE: quality_web
+      MYSQL_USER: quality
+      MYSQL_PASSWORD: Qu4l1ty
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+      - sql-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+volumes:
+  sql-data:
+  webcontent:
