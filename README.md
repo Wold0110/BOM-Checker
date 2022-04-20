@@ -12,4 +12,7 @@ bom
     product_id  -   int
     part_type   -   int
     part_name   -   text
+timestamps
+    product_id  -   int
+    timestamp   -   datetime
 </pre>
