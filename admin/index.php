@@ -18,7 +18,6 @@
     <title>Admin page</title>
 </head>
 <body>
-	
 	<!-- #region header -->
     <section>
         <h1 class="display-3 text-center">
@@ -43,7 +42,7 @@
                     <div class="form-group">
                         <select class="form-select" name="oldprod" id="oldprod">
                         <?php
-                            require_once($_SERVER['DOCUMENT_ROOT']."./sql.php");
+                            require_once(__DIR__."\..\sql.php");
                             $sql = "SELECT `id`,`name` FROM quality_web.products;";
                             $res = $mysql->query($sql);
                             while($row = $res->fetch_assoc()){
@@ -69,7 +68,7 @@
                 <label class="col-form-label" for="oldpart">Select the part</label>
                 <select class="form-select" name="oldpart" id="oldpart">
                     <?php
-                        require_once($_SERVER['DOCUMENT_ROOT']."./sql.php");
+                        require_once(__DIR__."\..\sql.php");
                         $sql = "SELECT `id`,`name` FROM quality_web.part_types;";
                         $res = $mysql->query($sql);
                         while($row = $res->fetch_assoc()){
@@ -86,7 +85,7 @@
                 <label class="col-form-label" for="bom_prod">Select the product</label>
                 <select class="form-select" name="bom_prod" id="bom_prod">
                     <?php
-                        require_once($_SERVER['DOCUMENT_ROOT']."./sql.php");
+                        require_once(__DIR__."\..\sql.php");
                         $sql = "SELECT `id`,`name` FROM quality_web.products;";
                         $res = $mysql->query($sql);
                         while($row = $res->fetch_assoc()){
@@ -97,7 +96,7 @@
                 <label class="col-form-label" for="bom_type">Select the part type</label>
                 <select class="form-select"name="bom_type" id="bom_type">
                     <?php
-                        require_once($_SERVER['DOCUMENT_ROOT']."./sql.php");
+                        require_once(__DIR__."\..\sql.php");
                         $sql = "SELECT `id`,`name` FROM quality_web.part_types;";
                         $res = $mysql->query($sql);
                         while($row = $res->fetch_assoc()){
