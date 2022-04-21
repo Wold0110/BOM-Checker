@@ -1,5 +1,5 @@
 <?php
-    require_once(__DIR__."\..\sql.php");
+    require_once("sql.php");
     $op = $_POST['op'];
 
     switch($op){

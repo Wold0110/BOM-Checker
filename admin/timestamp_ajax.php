@@ -1,5 +1,5 @@
 <?php
-    require_once(__DIR__."\..\sql.php");
+    require_once("sql.php");
     $from = $_POST['from'];
     
     $sql = "SELECT products.name AS 'name', timestamps.time AS 'time' FROM timestamps INNER JOIN products ON products.id = timestamps.prod_id WHERE timestamps.time >= '$from'";

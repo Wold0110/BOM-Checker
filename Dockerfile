@@ -12,10 +12,6 @@ ENV https_proxy=http://165.225.200.15:80
 RUN apt update && apt upgrade -y
 RUN apt install php php-mysqli -y
 
-#no proxy
-ENV http_proxy=
-ENV https_proxy=
-
 #add my own files
 COPY . $WEB
 
