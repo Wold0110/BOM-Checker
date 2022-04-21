@@ -14,7 +14,7 @@
 
     <!-- custom js -->
     <script src="js/ajax.js"></script> 
-    <script src="js/code_check.js"></script> 
+
     <title>Main page</title>
 </head>
 <body>
@@ -56,10 +56,6 @@
                     ?>
                     </select>
                     <input class="form-control btn btn-primary btn-block w-100" type="button" value="Listázás" onclick="listBom()">
-                    
-                    <br>
-                    <label class="col-form-label" for="code_input">Type the product REF</label>
-                    <input class="form-control" type='text' onkeypress='return enter_code(event)' id='code_input'>
                 </form>
                 
             </div>

@@ -1,5 +1,7 @@
 var count = 0;
 var proid = 0;
+var ids = [];
+
 function listBom(){
     prodid = document.getElementById("prod").value;
     var msg = "id="+prodid;
@@ -30,6 +32,22 @@ function getBOMcount(msg){
     xmlhttp.open("POST","ajax_count.php",true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send(msg);
+}
+
+function box_click(id){
+    if(ids.includes(id)){
+        var index = ids.indexOf(id);
+        if(index > -1){
+            ids.splice(index,1);
+        }
+    }
+    else{
+        ids.push(id);
+    }
+    if(ids.length == count){
+        timestampRef();
+        alert("Product recorded with timestamp attached.")
+    }
 }
 
 function timestampRef(){
