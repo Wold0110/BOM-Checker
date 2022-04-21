@@ -48,10 +48,10 @@
                     <!-- php list -->
                     <?php
                         require_once("sql.php");
-                        $sql = "SELECT `id`,`name` FROM quality_web.products;";
+                        $sql = "SELECT `id`,`name`,`ref` FROM quality_web.products;";
                         $res = $mysql->query($sql);
                         while($row = $res->fetch_assoc()){
-                            echo "<option value='".$row['id']."' id='prod".$row['id']."'>".$row['name']."</option>";
+                            echo "<option value='".$row['id']."' id='prod".$row['id']."'>".$row['name']." - ".$row['ref']."</option>";
                         }
                     ?>
                     </select>
