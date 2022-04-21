@@ -5,7 +5,10 @@
     switch($op){
         case "new":
             $name = $_POST['name'];
-            $sql = "INSERT INTO quality_web.products VALUES(NULL,'$name')";
+            $ref = $_POST['ref'];
+            
+            $sql = "INSERT INTO quality_web.products VALUES(NULL,'$name','$ref')";
+            //echo $sql;
             $mysql->query($sql);
             echo "Sikeresen létrehozva.";
             break;

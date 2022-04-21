@@ -34,8 +34,10 @@
                 <form>
                     <h4>Product managment</h4>
                     <div class="form-group">
-                        <label class="col-form-label" for="newprod">Type the new product's reference/name</label>
-                        <input class="form-control" placeholder="EEE114569" type="text" name="newprod" id="newprod">
+                        <label class="col-form-label" for="newprod">Type the new product's name</label>
+                        <input class="form-control" placeholder="125A Thingy" type="text" name="newprod" id="newprod">
+                        <label class="col-form-label" for="newprodref">Type the new product's reference</label>
+                        <input class="form-control" placeholder="EEE114569" type="text" name="newprodref" id="newprodref">
                         <input class="form-control btn btn-primary btn-block w-100" type="button" value="Add" onclick="prod('new')">
                     </div>
                     <label class="col-form-label" for="oldprod">Select the product</label>

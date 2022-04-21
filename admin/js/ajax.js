@@ -2,12 +2,12 @@ function prod(action){
     switch(action){
         case 'new':
             var newname = document.getElementById("newprod").value;
-            var msg = "op=new&name="+newname;
+            var newref = document.getElementById("newprodref").value;
+            var msg = "op=new&name="+newname+"&ref="+newref;
             xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    var msg = this.responseText;
-                    console.log(msg);
+                    console.log(this.responseText);
                 }
             };
             xmlhttp.open("POST","prod_ajax.php",true);
@@ -21,8 +21,7 @@ function prod(action){
             xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    var msg = this.responseText;
-                    console.log(msg);
+                    console.log(this.responseText);
                 }
             };
             xmlhttp.open("POST","prod_ajax.php",true);
@@ -39,8 +38,7 @@ function parttype(action){
             xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    var msg = this.responseText;
-                    console.log(msg);
+                    console.log(this.responseText);
                 }
             };
             xmlhttp.open("POST","part_ajax.php",true);
@@ -54,8 +52,7 @@ function parttype(action){
             xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    var msg = this.responseText;
-                    console.log(msg);
+                    console.log(this.responseText);
                 }
             };
             xmlhttp.open("POST","part_ajax.php",true);
