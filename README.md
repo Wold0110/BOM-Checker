@@ -5,6 +5,7 @@
 products
     id          -   int
     name        -   text
+    ref-        -   text
 part_types
     id          -   int
     name        -   text
