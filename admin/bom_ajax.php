@@ -1,5 +1,5 @@
 <?php
-    require_once("sql.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."./sql.php");
     $op = $_POST['op'];
     $prod = $_POST['prod'];
     $type = $_POST['type'];
