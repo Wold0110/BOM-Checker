@@ -1,7 +1,7 @@
 img.logo{
     max-height: 9vh;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0px;
+    margin-left: 1vw;
     border-radius: 15px;
 }
 img.blind{

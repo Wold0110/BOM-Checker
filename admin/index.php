@@ -18,12 +18,18 @@
     <title>Admin page</title>
 </head>
 <body>
-	<!-- #region header -->
-    <section>
-        <h1 class="display-3 text-center">
-            BOM Creator Web Interface
-        </h1>
-    </section>
+
+	<!-- #region navbar -->
+	<header>
+        <nav class="navbar navbar-expand">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <img class="img-thumbnail logo d-none d-sm-block" src="img/se.png" alt="Schneider Electric" title="Schneider Electric">
+                <h1 class="display-3 text-center">
+                    BOM Checker
+                </h1>
+            </div>
+        </nav>
+    </header>
     <!-- #endregion -->
 	
     <!-- #region content -->

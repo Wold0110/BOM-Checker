@@ -1,13 +1,13 @@
 body{
-    background-color: #5d7434;
-    color: #FFFFFF;
+    background-color: #fff;
+    color: #000;
 }
 pre{
     color: white;
 }
 nav.navbar{
-    background-color: #3F5512;
-    color: #E4FFAF;
+    background-color: #009e4d;
+    color: #fff;
 }
 a.nav-link{
     color: #E4FFAF;
@@ -47,26 +47,22 @@ hr{
 #off-mobil{
     display: none;
 }
-table.table{
-    color:#ffffff;
-}
 input.btn-block{
     margin: 0px;
     margin-top: 1vh;
     padding: 0px;
 }
 input.btn-primary{
-    background-color: black;
+    background-color: #009e4d;
     background-repeat: no-repeat;
     background-size: 100% 5vh;
     color:white;
 }
 input.btn-primary:hover{
-    background-color:#99cf2c;
-    color:black;
+    background-color:black;
+    color: white;
 }
 a.btn-primary{
-
     background-repeat: no-repeat;
     background-size: 100% 5vh;
     color:white;
