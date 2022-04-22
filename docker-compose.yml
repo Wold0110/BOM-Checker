@@ -20,7 +20,7 @@ services:
       MYSQL_PASSWORD: Qu4l1ty
       TZ: Europe/Budapest
     volumes:
-      - .\sql:/docker-entrypoint-initdb.d
+      - .\sql_dump:/docker-entrypoint-initdb.d
       - sql-data:/var/lib/mysql
     ports:
       - "3306:3306"
