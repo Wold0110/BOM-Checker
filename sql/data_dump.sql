@@ -1,5 +1,5 @@
 -- --------------------------------------------------------
--- Host:                         localhost
+-- Host:                         127.0.0.1
 -- Server version:               8.0.28 - MySQL Community Server - GPL
 -- Server OS:                    Linux
 -- HeidiSQL Version:             12.0.0.6468
@@ -9,7 +9,7 @@
 /*!40101 SET NAMES utf8 */;
 /*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-SET TIME_ZONE = '+02:00';
+/*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
@@ -789,14 +789,15 @@ CREATE TABLE IF NOT EXISTS `operator` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table quality_web.operator: ~0 rows (approximately)
 DELETE FROM `operator`;
 INSERT INTO `operator` (`id`, `name`) VALUES
-	(1, 'Valter'),
-	(2, 'Dani'),
-	(3, 'Ricsi');
+	(1, 'Máté Nikolett'),
+	(2, 'Jakabfy Alexandra'),
+	(3, 'Jancsi viktória'),
+	(4, 'Bertókné Andrea');
 
 -- Dumping structure for table quality_web.part_types
 CREATE TABLE IF NOT EXISTS `part_types` (
