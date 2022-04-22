@@ -18,6 +18,7 @@ services:
       MYSQL_DATABASE: quality_web
       MYSQL_USER: quality
       MYSQL_PASSWORD: Qu4l1ty
+      TZ: Europe/Budapest
     volumes:
       - .\sql:/docker-entrypoint-initdb.d
       - sql-data:/var/lib/mysql
