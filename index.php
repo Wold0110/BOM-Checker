@@ -18,24 +18,18 @@
     <title>Main page</title>
 </head>
 <body>
-	<!-- #region header -->
-    <section>
-        <h1 class="display-3 text-center">
-            BOM Checker
-        </h1>
-    </section>
-    <!-- #endregion -->
 	
 	<!-- #region navbar -->
 	<header>
         <nav class="navbar navbar-expand-lg">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            szia    
+                <h1 class="display-3 text-center">
+                    BOM Checker
+                </h1>
             </div>
         </nav>
     </header>
     <!-- #endregion -->
-
     
 
     <!-- #region concent -->
@@ -44,6 +38,7 @@
             <div class="col-lg-5">
                 <br>
                 <form>
+                    <label class="col-form-label" for="prod">Select the product</label>
                     <select name="prod" id="prod" class="form-select form-select-lg mb-3">
                     <!-- php list -->
                     <?php
@@ -55,7 +50,20 @@
                         }
                     ?>
                     </select>
-                    <input class="form-control btn btn-primary btn-block w-100" type="button" value="Listázás" onclick="listBom()">
+                    
+                    <label class="col-form-label" for="operator">Select the user</label>
+                    <select name="operator" id="operator" class="form-select form-select-lg mb-3">
+                    <!-- php list -->
+                    <?php
+                        require_once("sql.php");
+                        $sql = "SELECT `id`,`name` FROM quality_web.operator;";
+                        $res = $mysql->query($sql);
+                        while($row = $res->fetch_assoc()){
+                            echo "<option value='".$row['id']."' id='prod".$row['id']."'>".$row['name']."</option>";
+                        }
+                    ?>
+                    </select>
+                    <input class="form-control btn btn-primary btn-block w-100" type="button" value="List BOM" onclick="listBom()">
                 </form>
                 
             </div>

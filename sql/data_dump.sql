@@ -1,5 +1,5 @@
 -- --------------------------------------------------------
--- Host:                         127.0.0.1
+-- Host:                         localhost
 -- Server version:               8.0.28 - MySQL Community Server - GPL
 -- Server OS:                    Linux
 -- HeidiSQL Version:             12.0.0.6468
@@ -9,7 +9,7 @@
 /*!40101 SET NAMES utf8 */;
 /*!50503 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
+SET TIME_ZONE = '+02:00';
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `bom` (
   `part_name` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table quality_web.bom: ~1 rows (approximately)
+-- Dumping data for table quality_web.bom: ~754 rows (approximately)
 DELETE FROM `bom`;
 INSERT INTO `bom` (`product_id`, `part_type`, `part_name`) VALUES
 	(1, 1, '51006710ED / EEE11471'),
@@ -784,6 +784,20 @@ INSERT INTO `bom` (`product_id`, `part_type`, `part_name`) VALUES
 	(50, 15, '51006102AE'),
 	(50, 17, '51006012AD');
 
+-- Dumping structure for table quality_web.operator
+CREATE TABLE IF NOT EXISTS `operator` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- Dumping data for table quality_web.operator: ~0 rows (approximately)
+DELETE FROM `operator`;
+INSERT INTO `operator` (`id`, `name`) VALUES
+	(1, 'Valter'),
+	(2, 'Dani'),
+	(3, 'Ricsi');
+
 -- Dumping structure for table quality_web.part_types
 CREATE TABLE IF NOT EXISTS `part_types` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -791,7 +805,7 @@ CREATE TABLE IF NOT EXISTS `part_types` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table quality_web.part_types: ~0 rows (approximately)
+-- Dumping data for table quality_web.part_types: ~17 rows (approximately)
 DELETE FROM `part_types`;
 INSERT INTO `part_types` (`id`, `name`) VALUES
 	(1, 'Mágneses'),
@@ -820,7 +834,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table quality_web.products: ~0 rows (approximately)
+-- Dumping data for table quality_web.products: ~50 rows (approximately)
 DELETE FROM `products`;
 INSERT INTO `products` (`id`, `name`, `ref`) VALUES
 	(1, '10A C UNI / 1 Pólus ', '3599424KA'),
@@ -877,7 +891,8 @@ INSERT INTO `products` (`id`, `name`, `ref`) VALUES
 -- Dumping structure for table quality_web.timestamps
 CREATE TABLE IF NOT EXISTS `timestamps` (
   `prod_id` int NOT NULL,
-  `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `operator` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table quality_web.timestamps: ~9 rows (approximately)

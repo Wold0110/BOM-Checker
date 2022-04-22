@@ -51,12 +51,14 @@ function box_click(id){
 }
 
 function timestampRef(){
-    var msg = "id="+prodid;
+    var operator = document.getElementById("operator").value;
+    var msg = "id="+prodid+"&operator="+operator;
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             console.log(this.responseText);
             if(this.responseText != "log created"){
+                console.log(this.responseText);
                 alert("Critical Error!");
             }
         }

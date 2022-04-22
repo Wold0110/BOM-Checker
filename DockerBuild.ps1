@@ -1,1 +1,0 @@
-docker build -f Dockerfile -t bom_checker:latest .

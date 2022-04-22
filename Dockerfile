@@ -15,5 +15,8 @@ RUN apt install php php-mysqli -y
 #add my own files
 COPY . $WEB
 
+#to use good database
+ENV DEPLOYED=yes
+
 #backup default apache
 RUN mv $WEB/index.html $WEB/apache.html
