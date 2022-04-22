@@ -16,4 +16,8 @@ bom
 timestamps
     product_id  -   int
     timestamp   -   datetime
+    operator    -   int
+operator
+    id          -   int
+    name        -   text
 </pre>
