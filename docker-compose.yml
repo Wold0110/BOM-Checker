@@ -1,18 +1,37 @@
 version: '3.8'
+#walter20020110@gmail.com
 
 services:
   website:
+    container_name: website
     build: .
+    restart: always
     ports:
       - "80:80"
-    volumes:
-      - webcontent:/var/www/html
+    links:
+      - "database:database"
+  #admin webfelület az adatbázishoz
+  adminpage:
+    container_name: pma
+    image: phpmyadmin
+    restart: always
+    ports:
+      - "81:80"
+    environment:
+      PMA_HOST: database
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+      TZ: Europe/Budapest
     links:
       - "database:database"
   database:
+    container_name: mysql
     image: mysql
-    command: --default-authentication-plugin=mysql_native_password
     restart: always
+    #nem kell kintre is kinyitni, ütközhet valami mással
+    expose:
+      - "3306:3306"
+    command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_ROOT_PASSWORD: asd12345
       MYSQL_DATABASE: quality_web
@@ -20,10 +39,7 @@ services:
       MYSQL_PASSWORD: Qu4l1ty
       TZ: Europe/Budapest
     volumes:
-      - .\sql_dump:/docker-entrypoint-initdb.d
-      - sql-data:/var/lib/mysql
-    ports:
-      - "3306:3306"
+      - .\sql_dump:/docker-entrypoint-initdb.d #SQL dump betöltése
+      - sql-data:/var/lib/mysql                #SQL adat mentése Volumeba
 volumes:
   sql-data:
-  webcontent:
