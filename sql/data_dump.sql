@@ -796,7 +796,7 @@ DELETE FROM `operator`;
 INSERT INTO `operator` (`id`, `name`) VALUES
 	(1, 'Máté Nikolett'),
 	(2, 'Jakabfy Alexandra'),
-	(3, 'Jancsi viktória'),
+	(3, 'Jancsi Viktória'),
 	(4, 'Bertókné Andrea');
 
 -- Dumping structure for table quality_web.part_types
