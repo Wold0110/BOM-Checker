@@ -10,7 +10,6 @@ services:
       - "80:80"
     links:
       - "database:database"
-  #admin webfelület az adatbázishoz
   adminpage:
     container_name: pma
     image: phpmyadmin
@@ -28,7 +27,6 @@ services:
     container_name: mysql
     image: mysql
     restart: always
-    #nem kell kintre is kinyitni, ütközhet valami mással
     expose:
       - "3306:3306"
     command: --default-authentication-plugin=mysql_native_password
