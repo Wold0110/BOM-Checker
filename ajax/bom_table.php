@@ -9,7 +9,7 @@
                     
     while($row = $res->fetch_assoc()){
         echo "<tr><td>".$row['prod']."</td><td>".$row['type']."</td><td>".$row['part_name']."</td><td>"
-            ."<input class='form-check-input-bg btn-lg' onclick='box_click(\"".$row['part_name']."\")' type='checkbox' readonly"
+            ."<input id='".$row['part_name']."' class='form-check-input-bg btn-lg' onclick='box_click(\"".$row['part_name']."\"); return false;' type='checkbox' readonly"
             ."</td></tr>";
     }
     echo "</tbody></table>";

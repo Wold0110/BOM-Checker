@@ -102,7 +102,6 @@ function listTimestamps(){
     var from_date =  document.getElementById("from_date").value;
     var msg = "from="+from_date;
     if(from_date != ""){
-        console.log(msg);
         xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {

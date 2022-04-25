@@ -69,6 +69,9 @@
                     <!-- button to list BOM table -->
                     <input class="form-control btn btn-primary btn-block w-100" type="button" value="List BOM" onclick="listBom()">
                 </form>
+                <div id="confirm-pic">
+
+                </div>
             </div>
 
             <div class="col-lg-7" id="bom">
