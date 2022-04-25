@@ -19,7 +19,6 @@ services:
     environment:
       PMA_HOST: database
       PMA_PORT: 3306
-      PMA_ARBITRARY: 1
       TZ: Europe/Budapest
     links:
       - "database:database"
