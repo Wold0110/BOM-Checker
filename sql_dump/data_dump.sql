@@ -791,7 +791,7 @@ CREATE TABLE IF NOT EXISTS `operator` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table quality_web.operator: ~0 rows (approximately)
+-- Dumping data for table quality_web.operator: ~4 rows (approximately)
 DELETE FROM `operator`;
 INSERT INTO `operator` (`id`, `name`) VALUES
 	(1, 'Máté Nikolett'),
@@ -838,13 +838,13 @@ CREATE TABLE IF NOT EXISTS `products` (
 -- Dumping data for table quality_web.products: ~50 rows (approximately)
 DELETE FROM `products`;
 INSERT INTO `products` (`id`, `name`, `ref`) VALUES
-	(1, '10A C UNI / 1 Pólus ', '3599424KA'),
-	(2, '63A B UNI / 1 Pólus ', '3599434SA'),
-	(3, '63A C UNI / 1 Pólus ', '3599424CA'),
-	(4, '63A D UNI / 1 Pólus ', '3599424EA'),
-	(5, '80A B UNI / 1 Pólus ', '3599434UA'),
-	(6, '80A C UNI / 1 Pólus ', '3599443AA'),
-	(7, '80A D UNI / 1 Pólus ', '3599441EA'),
+	(1, '10A C UNI / 1 Pólus', '3599424KA'),
+	(2, '63A B UNI / 1 Pólus', '3599434SA'),
+	(3, '63A C UNI / 1 Pólus', '3599424CA'),
+	(4, '63A D UNI / 1 Pólus', '3599424EA'),
+	(5, '80A B UNI / 1 Pólus', '3599434UA'),
+	(6, '80A C UNI / 1 Pólus', '3599443AA'),
+	(7, '80A D UNI / 1 Pólus', '3599441EA'),
 	(8, '10A C BIP / 2P', '3599424DA'),
 	(9, '63A B BIP / 2P', '3599424FA'),
 	(10, '63A C BIP / 2P', '3599442DA'),
@@ -854,40 +854,40 @@ INSERT INTO `products` (`id`, `name`, `ref`) VALUES
 	(14, '80A C BIP / 2P', '3599441UA'),
 	(15, '80A D BIP / 2P', '3599422LA'),
 	(16, '80A INTER BIP / 2P', '3599422VA'),
-	(17, '63A B TRI / 3P ', '3599433LA'),
-	(18, '63A C TRI / 3P ', '3599432DA'),
-	(19, '63A D TRI / 3P ', '3599433JA'),
-	(20, '63A INTER TRI / 3P ', '3599438DA'),
-	(21, '80A B TRI / 3P ', '3599420JA'),
-	(22, '80A C TRI / 3P ', '3599417NA'),
-	(23, '80A D TRI / 3P ', '3599417TA'),
-	(24, '80A INTER TRI / 3P ', '3599420MA'),
-	(25, '100A B TRI / 3P ', '3599417JA'),
-	(26, '100A C TRI / 3P ', '3599417BA'),
-	(27, '100A D TRI / 3P ', '3599417LA'),
-	(28, '100A INTER TRI / 3P ', '3599420TA'),
-	(29, '125A B TRI / 3P ', '3599417HA'),
-	(30, '125A C TRI / 3P ', '3599417RA'),
-	(31, '125A D TRI / 3P ', '3599417EA'),
-	(32, '125A INTER TRI / 3P ', '3599417ZA'),
-	(33, '63A B TETRA / 4P ', '3599442KA'),
-	(34, '63A C TETRA / 4P ', '3599432NA'),
-	(35, '63A D TETRA / 4P ', '3599442HA'),
-	(36, '63A INTER TRI+N / 4P ', '3599438BA'),
-	(37, '80A B TETRA / 4P ', '3599420GA'),
-	(38, '80A C TETRA / 4P ', '3599420CA'),
-	(39, '80A D TETRA / 4P ', '3599420FA'),
+	(17, '63A B TRI / 3P', '3599433LA'),
+	(18, '63A C TRI / 3P', '3599432DA'),
+	(19, '63A D TRI / 3P', '3599433JA'),
+	(20, '63A INTER TRI / 3P', '3599438DA'),
+	(21, '80A B TRI / 3P', '3599420JA'),
+	(22, '80A C TRI / 3P', '3599417NA'),
+	(23, '80A D TRI / 3P', '3599417TA'),
+	(24, '80A INTER TRI / 3P', '3599420MA'),
+	(25, '100A B TRI / 3P', '3599417JA'),
+	(26, '100A C TRI / 3P', '3599417BA'),
+	(27, '100A D TRI / 3P', '3599417LA'),
+	(28, '100A INTER TRI / 3P', '3599420TA'),
+	(29, '125A B TRI / 3P', '3599417HA'),
+	(30, '125A C TRI / 3P', '3599417RA'),
+	(31, '125A D TRI / 3P', '3599417EA'),
+	(32, '125A INTER TRI / 3P', '3599417ZA'),
+	(33, '63A B TETRA / 4P', '3599442KA'),
+	(34, '63A C TETRA / 4P', '3599432NA'),
+	(35, '63A D TETRA / 4P', '3599442HA'),
+	(36, '63A INTER TRI+N / 4P', '3599438BA'),
+	(37, '80A B TETRA / 4P', '3599420GA'),
+	(38, '80A C TETRA / 4P', '3599420CA'),
+	(39, '80A D TETRA / 4P', '3599420FA'),
 	(40, '80-100A INTER TRI+N', '3599423MA'),
 	(41, '80A NS C INTER TRI+N', '3599420BA'),
-	(42, '100A B TETRA / 4P ', '3599417UA'),
-	(43, '100A C TETRA / 4P ', '3599417CA'),
-	(44, '100A D TETRA / 4P ', '3599415HA'),
+	(42, '100A B TETRA / 4P', '3599417UA'),
+	(43, '100A C TETRA / 4P', '3599417CA'),
+	(44, '100A D TETRA / 4P', '3599415HA'),
 	(45, '100A NS C INTER TRI+N', '3599402CA'),
-	(46, '125A B TETRA / 4P ', '3599415FA'),
-	(47, '125A C TETRA / 4P ', '3599415BA'),
-	(48, '125A D TETRA / 4P ', '3599415CA'),
-	(49, '125A INTER TRI+N ', '3599423JA'),
-	(50, '125A NS C INTER TRI+N ', '3599402BA');
+	(46, '125A B TETRA / 4P', '3599415FA'),
+	(47, '125A C TETRA / 4P', '3599415BA'),
+	(48, '125A D TETRA / 4P', '3599415CA'),
+	(49, '125A INTER TRI+N', '3599423JA'),
+	(50, '125A NS C INTER TRI+N', '3599402BA');
 
 -- Dumping structure for table quality_web.timestamps
 CREATE TABLE IF NOT EXISTS `timestamps` (
@@ -896,7 +896,7 @@ CREATE TABLE IF NOT EXISTS `timestamps` (
   `operator` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table quality_web.timestamps: ~9 rows (approximately)
+-- Dumping data for table quality_web.timestamps: ~0 rows (approximately)
 DELETE FROM `timestamps`;
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
