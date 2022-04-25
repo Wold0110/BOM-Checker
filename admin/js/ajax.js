@@ -10,7 +10,7 @@ function prod(action){
                     console.log(this.responseText);
                 }
             };
-            xmlhttp.open("POST","prod_ajax.php",true);
+            xmlhttp.open("POST","ajax/prod_ajax.php",true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp.send(msg);
             
@@ -24,7 +24,7 @@ function prod(action){
                     console.log(this.responseText);
                 }
             };
-            xmlhttp.open("POST","prod_ajax.php",true);
+            xmlhttp.open("POST","ajax/prod_ajax.php",true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp.send(msg);
             break;
@@ -41,7 +41,7 @@ function parttype(action){
                     console.log(this.responseText);
                 }
             };
-            xmlhttp.open("POST","part_ajax.php",true);
+            xmlhttp.open("POST","ajax/part_ajax.php",true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp.send(msg);
             
@@ -55,7 +55,7 @@ function parttype(action){
                     console.log(this.responseText);
                 }
             };
-            xmlhttp.open("POST","part_ajax.php",true);
+            xmlhttp.open("POST","ajax/part_ajax.php",true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp.send(msg);
             break;
@@ -77,7 +77,7 @@ function bom(action){
                     console.log(msg);
                 }
             };
-            xmlhttp.open("POST","bom_ajax.php",true);
+            xmlhttp.open("POST","ajax/bom_ajax.php",true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp.send(msg);
             
@@ -91,7 +91,7 @@ function bom(action){
                     console.log(msg);
                 }
             };
-            xmlhttp.open("POST","bom_ajax.php",true);
+            xmlhttp.open("POST","ajax/bom_ajax.php",true);
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp.send(msg);
             break;
@@ -109,7 +109,7 @@ function listTimestamps(){
                 document.getElementById("timestamp-table").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("POST","timestamp_ajax.php",true);
+        xmlhttp.open("POST","ajax/timestamp_ajax.php",true);
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xmlhttp.send(msg);
     }

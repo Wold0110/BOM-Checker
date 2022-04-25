@@ -1,6 +1,17 @@
-# quality_web
+# BOM Checker
 
-> sql felépítés 2022-04-20
+## Containers
+> website       - from apache2 with php,php-mysqli  
+> mysql         - not exposed to public  
+> phpmyadmin    - port 81
+---
+
+## Database login
+> username: quality  
+> password: Qu4l1ty
+---
+
+## sql felépítés 2022-04-20
 <pre>
 products
     id          -   int

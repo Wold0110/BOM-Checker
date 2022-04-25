@@ -5,8 +5,6 @@ var ids = [];
 function listBom(){
     prodid = document.getElementById("prod").value;
     var msg = "id="+prodid;
-
-    //get BOM
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -14,7 +12,7 @@ function listBom(){
             document.getElementById("bom").innerHTML = msg;
         }
     };
-    xmlhttp.open("POST","ajax.php",true);
+    xmlhttp.open("POST","ajax/bom_table.php",true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send(msg);
 
@@ -26,10 +24,9 @@ function getBOMcount(msg){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             count = parseInt(this.responseText);
-            console.log("bom count:"+this.responseText);
         }
     };
-    xmlhttp.open("POST","ajax_count.php",true);
+    xmlhttp.open("POST","ajax/bom_count.php",true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send(msg);
 }
@@ -63,7 +60,7 @@ function timestampRef(){
             }
         }
     };
-    xmlhttp.open("POST","all_checked.php",true);
+    xmlhttp.open("POST","ajax/log.php",true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send(msg);
 }
