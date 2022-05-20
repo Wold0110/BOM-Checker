@@ -1,5 +1,7 @@
-# BOM Checker v0.3
-## BOM uploader: https://github.com/Wold0110/BOM-Uploader
+# BOM Checker v1.0
+
+![Main Screen](https://github.com/Wold0110/quality_web/blob/main/img/main_screen.png?raw=true)
+
 ## Containers
 > website       - from apache2 with php,php-mysqli  
 > mysql         - not exposed to public  
@@ -8,10 +10,12 @@
 
 ## Database login
 > username: quality  
-> password: Qu4l1ty
+> password: Qu4l1ty  
+> sql dump: https://github.com/Wold0110/quality_web/tree/main/sql_dump
 ---
 
-## sql felépítés 2022-04-20
+## C# Tool to upload BOM: https://github.com/Wold0110/BOM-Uploader
+## SQL Setup 2022-05-20
 <pre>
 products
     id          -   int
