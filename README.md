@@ -3,18 +3,18 @@
 ![Main Screen](https://github.com/Wold0110/BOM-Checker/blob/main/img/main_screen.png?raw=true)
 
 ## Containers
-> website       - from apache2 with php,php-mysqli  
-> mysql         - not exposed to public  
-> phpmyadmin    - port 81
+> website               - from apache2 with php,php-mysqli  
+> mysql(compose)        - not exposed to public  
+> phpmyadmin(compose)   - port 81
 ---
 
 ## Database login
 > username: quality  
 > password: Qu4l1ty  
-> sql dump: https://github.com/Wold0110/BOM-Checke/tree/main/sql_dump
+> sql dump: [SQL DataDump](https://github.com/Wold0110/BOM-Checker/blob/main/sql_dump/data_dump.sql)
 ---
 
-## C# Tool to upload BOM: https://github.com/Wold0110/BOM-Uploader
+## [C# Tool to upload BOM](https://github.com/Wold0110/BOM-Uploader)
 ## SQL Setup 2022-05-20
 <pre>
 products
