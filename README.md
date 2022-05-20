@@ -1,6 +1,6 @@
 # BOM Checker v1.0
 
-![Main Screen](https://github.com/Wold0110/quality_web/blob/main/img/main_screen.png?raw=true)
+![Main Screen](https://github.com/Wold0110/BOM-Checker/blob/main/img/main_screen.png?raw=true)
 
 ## Containers
 > website       - from apache2 with php,php-mysqli  
@@ -11,7 +11,7 @@
 ## Database login
 > username: quality  
 > password: Qu4l1ty  
-> sql dump: https://github.com/Wold0110/quality_web/tree/main/sql_dump
+> sql dump: https://github.com/Wold0110/BOM-Checke/tree/main/sql_dump
 ---
 
 ## C# Tool to upload BOM: https://github.com/Wold0110/BOM-Uploader
