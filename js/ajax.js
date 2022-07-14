@@ -1,5 +1,4 @@
 var count = 0;
-var proid = 0;
 var ids = [];
 
 function listBom(){
@@ -24,6 +23,7 @@ function getBOMcount(msg){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             count = parseInt(this.responseText);
+            ids = [];
         }
     };
     xmlhttp.open("POST","ajax/bom_count.php",true);
@@ -33,11 +33,7 @@ function getBOMcount(msg){
 
 function box_click(id){
     var picid = id.replace("/","^");
-    /*
-    
-    alert("asd");
-    */
-   var question = "<p>"+id+"</p>" 
+    var question = "<p>"+id+"</p>" 
     +"<img class='img-fluid' "
     +"src='img/parts/"+picid+".JPG' alt='Kép nem található' title='"+id+"'>"
     +"<div class='row'>"
