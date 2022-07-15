@@ -7,5 +7,3 @@ ENV TZ=Europe/Budapest
 COPY . $WEB
 #to use the correct database
 ENV DEPLOYED=yes
-#backup default apache
-RUN mv $WEB/index.html $WEB/apache.html
