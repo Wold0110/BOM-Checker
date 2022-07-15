@@ -146,6 +146,8 @@
             <div class="col-8">
             <label class="col-form-label" for="from_date">Select a FROM date:</label>
                 <input class="form-control" id="from_date" name="from_date" type="date">
+                <input class="form-control" id="to_date" name="to_date" type="date">
+                
                 <input class="form-control btn btn-primary btn-block w-100" type="button" value="List Timestamps from" onclick="listTimestamps()">
             </div>
             <div class="col-2"></div>

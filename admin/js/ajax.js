@@ -99,9 +99,10 @@ function bom(action){
 }
 
 function listTimestamps(){
-    var from_date =  document.getElementById("from_date").value;
-    var msg = "from="+from_date;
-    if(from_date != ""){
+    var from_date = document.getElementById("from_date").value;
+    var to_date = document.getElementById("from_date").value;
+    var msg = "from="+from_date+"&to="+to_date;
+    if(from_date != "" && to_date != ""){
         xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
