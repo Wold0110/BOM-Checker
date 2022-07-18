@@ -102,7 +102,7 @@ function listTimestamps(){
     var from_date = document.getElementById("from_date").value;
     var to_date = document.getElementById("to_date").value;
     var msg = "from="+from_date+"&to="+to_date;
-    console.log(msg);
+
     if(from_date != "" && to_date != ""){
         xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
@@ -113,6 +113,25 @@ function listTimestamps(){
         xmlhttp.open("POST","ajax/timestamp_ajax.php",true);
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xmlhttp.send(msg);
+    }   
+}
+
+function downloadList(){
+    var from_date = document.getElementById("from_date").value;
+    var to_date = document.getElementById("to_date").value;
+    var msg = "from="+from_date+"&to="+to_date;
+
+    if(from_date != "" && to_date != ""){
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                if(this.responseText.includes(".csv")){
+                    document.getElementById("timestamp-table").innerHTML="<a class='form-control btn btn-primary btn-block w-100' href='./reports/"+this.responseText+"'>Click to download data</a>";
+                }
+            }
+        };
+        xmlhttp.open("POST","ajax/download.php",true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send(msg);
     }
-            
 }

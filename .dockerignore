@@ -2,3 +2,4 @@ Dockerfile
 README*
 sql_dumps\*
 sql_dumps
+img\parts\*
