@@ -2,7 +2,7 @@
     require_once("sql.php");
     $from = $_POST['from'];
     $to = $_POST['to'];
-    $sql = "SELECT products.name AS 'name', timestamps.time AS 'time', operator.name AS 'user' FROM timestamps INNER JOIN products ON products.id = timestamps.prod_id INNER JOIN operator ON operator.id = timestamps.operator WHERE timestamps.time >= '$from' AND timestamps.time <= '$to'";
+    $sql = "SELECT products.name AS 'name', timestamps.time AS 'time', operator.name AS 'user' FROM timestamps INNER JOIN products ON products.id = timestamps.prod_id INNER JOIN operator ON operator.id = timestamps.operator WHERE timestamps.time >= '$from' AND DATE(timestamps.time) <= '$to'";
     $res = $mysql->query($sql);
     echo "<table class='table table-striped table-bordered'><tbody><tr>"
         ."<th>Prod:</th><th>Time:</th><th>User:</th>"

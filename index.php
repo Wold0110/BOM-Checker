@@ -14,7 +14,7 @@
     <link href="css/color.css" rel="stylesheet" type="text/css" media="screen">
 
     <!-- custom js -->
-    <script src="js/ajax.js"></script>
+    <script src="js/user.js"></script>
 
     <title>Main page</title>
 </head>

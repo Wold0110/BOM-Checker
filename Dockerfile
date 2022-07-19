@@ -5,5 +5,6 @@ ENV WEB=/var/www/html
 ENV TZ=Europe/Budapest
 #add my own files
 COPY . $WEB
+RUN chmod -R 777 $WEB
 #to use the correct database
 ENV DEPLOYED=yes
