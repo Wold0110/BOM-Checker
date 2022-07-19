@@ -10,11 +10,11 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- css -->
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen">
-    <link href="css/color.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="./css/style.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="./css/color.css" rel="stylesheet" type="text/css" media="screen">
 
     <!-- custom js -->
-    <script src="js/user.js"></script>
+    <script src="./js/user.js"></script>
 
     <title>Main page</title>
 </head>
@@ -43,7 +43,7 @@
                     <select name="prod" id="prod" class="form-select form-select-lg mb-3">
                         
                         <?php
-                        require_once("ajax/sql.php");
+                        require_once("./ajax/sql.php");
                         $sql = "SELECT `id`,`name`,`ref` FROM quality_web.products;";
                         $res = $mysql->query($sql);
                         while($row = $res->fetch_assoc()){
@@ -57,7 +57,7 @@
                     <select name="operator" id="operator" class="form-select form-select-lg mb-3">
                         
                         <?php
-                        require_once("ajax/sql.php");
+                        require_once("./ajax/sql.php");
                         $sql = "SELECT `id`,`name` FROM quality_web.operator;";
                         $res = $mysql->query($sql);
                         while($row = $res->fetch_assoc()){

@@ -11,7 +11,7 @@ function listBom(){
             document.getElementById("bom").innerHTML = msg;
         }
     };
-    xmlhttp.open("POST","ajax/bom_table.php",true);
+    xmlhttp.open("POST","./ajax/bom_table.php",true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send(msg);
 
@@ -26,7 +26,7 @@ function getBOMcount(msg){
             ids = [];
         }
     };
-    xmlhttp.open("POST","ajax/bom_count.php",true);
+    xmlhttp.open("POST","./ajax/bom_count.php",true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send(msg);
 }
@@ -77,7 +77,7 @@ function timestampRef(){
             }
         }
     };
-    xmlhttp.open("POST","ajax/log.php",true);
+    xmlhttp.open("POST","./ajax/log.php",true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send(msg);
 }

@@ -10,11 +10,11 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- css -->
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen">
-    <link href="css/color.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="./css/style.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="./css/color.css" rel="stylesheet" type="text/css" media="screen">
     
     <!-- custom css -->
-    <script src="../js/admin.js"></script> 
+    <script src="./js/admin.js"></script> 
     
     <title>Admin page</title>
 </head>
@@ -53,7 +53,7 @@
                         <label class="col-form-label" for="oldprod">Select the product</label>
                         <select class="form-select" name="oldprod" id="oldprod">
                         <?php
-                            require_once("../ajax/sql.php");
+                            require_once("./ajax/sql.php");
                             $sql = "SELECT `id`,`name` FROM quality_web.products;";
                             $res = $mysql->query($sql);
                             while($row = $res->fetch_assoc()){
@@ -81,7 +81,7 @@
                         <label class="col-form-label" for="oldpart">Select the part</label>
                         <select class="form-select" name="oldpart" id="oldpart">
                             <?php
-                                require_once("../ajax/sql.php");
+                                require_once("./ajax/sql.php");
                                 $sql = "SELECT `id`,`name` FROM quality_web.part_types;";
                                 $res = $mysql->query($sql);
                                 while($row = $res->fetch_assoc()){
@@ -103,7 +103,7 @@
                         <label class="col-form-label" for="bom_prod">Select the product</label>
                         <select class="form-select" name="bom_prod" id="bom_prod">
                             <?php
-                                require_once("../ajax/sql.php");
+                                require_once("./ajax/sql.php");
                                 $sql = "SELECT `id`,`name` FROM quality_web.products;";
                                 $res = $mysql->query($sql);
                                 while($row = $res->fetch_assoc()){
@@ -116,7 +116,7 @@
                     <label class="col-form-label" for="bom_type">Select the part type</label>
                     <select class="form-select"name="bom_type" id="bom_type">
                         <?php
-                            require_once("../ajax/sql.php");
+                            require_once("./ajax/sql.php");
                             $sql = "SELECT `id`,`name` FROM quality_web.part_types;";
                             $res = $mysql->query($sql);
                             while($row = $res->fetch_assoc()){
