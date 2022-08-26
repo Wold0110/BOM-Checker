@@ -1,0 +1,1 @@
+sql_dumper\mysqldump.exe --no-tablespaces --host=wthu010501056d --user=quality --password=Qu4l1ty quality_web > latest.sql
