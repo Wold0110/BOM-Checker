@@ -69,7 +69,7 @@
                     <div class="row">
                         <div class="col-4">
                             <!-- product list -->
-                            <label class="col-form-label" for="prod">Select the product</label>
+                            <label class="col-form-label" for="prod">Termék</label>
                             <select name="prod" id="prod" class="form-select form-select-lg mb-3">
                                 
                                 <?php
@@ -84,7 +84,7 @@
                         </div>
                         <div class="col-2">
                             <!-- line leaders -->
-                            <label class="col-form-label" for="operator">Select Line Leader</label>
+                            <label class="col-form-label" for="operator">Sorvezető</label>
                             <select name="operator" id="operator" class="form-select form-select-lg mb-3">
                                 <?php
                                 require_once("./ajax/sql.php");
@@ -106,14 +106,14 @@
                     <div class="row">
                         <?php
                             $ids = array("op-1","op-2","op-3","op-4","op-5");
-                            $texts = array("Állomás 1","Állomás 2","Állomás 3","Állomás 4","Állomás 5");
+                            $texts = array("Állomás 1/1","Állomás 1/2","Állomás 1/3","Állomás 1/4","Állomás 1/5");
                             operatorRow($ids,$texts,2);
                         ?>
                     </div>
                     <div class="row">
                         <?php
                             $ids = array("op-6","op-7","op-8","op-9","op-10");
-                            $texts = array("Állomás 6","Állomás 7","Állomás 8","Állomás 9","Állomás 10");
+                            $texts = array("Állomás 2/1","Állomás 2/2","Állomás 2/3","Állomás 2/4","Állomás 2/5");
                             operatorRow($ids,$texts,2);
                         ?>
                     </div>
