@@ -1,3 +1,5 @@
+
+
 function prod(action){
     switch(action){
         case 'new':
@@ -135,4 +137,37 @@ function downloadList(){
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xmlhttp.send(msg);
     }
+}
+
+function newName(){
+    var name = $('#newname').val();
+    var data = new FormData();
+    data.append("name",name);
+
+    $.ajax({
+        url: "/bom/admin/ajax/name_add.php",
+        type: "POST",
+        data: data,
+        contentType: false,
+        processData: false,
+        success: function (msg){
+            console.log("success");
+        },
+    });
+}
+
+function delName(){
+    var id = $("#oldname").find(":selected").val();
+    var data = new FormData();
+    data.append("id",id)
+    $.ajax({
+        url: "/bom/admin/ajax/name_del.php",
+        type: "POST",
+        data: data,
+        contentType: false,
+        processData: false,
+        success: function (msg){
+            console.log("success");
+        },
+    });
 }

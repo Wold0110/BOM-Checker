@@ -39,7 +39,7 @@
     <div class="container-fluid">
         <div class="row">
             <!-- products -->
-            <div class="col-4">
+            <div class="col-3">
                 <form>
                     <h4>Product managment</h4>
                     <!-- add product -->
@@ -70,7 +70,7 @@
             </div>
 
             <!-- parts -->
-            <div class="col-4">
+            <div class="col-3">
                 <form>
                     <h4>Add new Part Type</h4>
                     <!-- add part -->
@@ -98,7 +98,7 @@
             </div>
 
             <!-- bom -->
-            <div class="col-4">
+            <div class="col-3">
                 <h4>Add new BOM</h4>
                 <form>
                     <!-- add bom -->
@@ -117,7 +117,7 @@
                     </div>
                     <div class="form-group">
                     <label class="col-form-label" for="bom_type">Select the part type</label>
-                    <select class="form-select"name="bom_type" id="bom_type">
+                    <select class="form-select" name="bom_type" id="bom_type">
                         <?php
                             require_once("./ajax/sql.php");
                             $sql = "SELECT `id`,`name` FROM quality_web.part_types;";
@@ -141,7 +141,28 @@
                     </div>
                 </form>
             </div>
+
+            
         </div>
+        <!-- names -->
+        <div class="col-3">
+                <label class="col-form-label" for="bom_type">New user:</label>
+                <input class="form-control" placeholder="John Doe" type="text" name="newname" id="newname">
+                <input class="form-control btn btn-primary btn-block w-100" type="button" value="Add" onclick="newName()">
+                
+                <label class="col-form-label" for="oldname">Name to delete:</label>
+                <select class="form-select" name="oldname" id="oldname">
+                    <?php
+                        require_once("./ajax/sql.php");
+                        $select = "SELECT `id`,`name` FROM `operator`;";
+                        $res = $mysql->query($select);
+                        while($row = $res->fetch_assoc()){
+                            echo "<option value='".$row['id']."'>".$row['name']."</option>";
+                        }
+                    ?>
+                </select>
+                <input class="form-control btn btn-primary btn-block w-100" type="button" value="Delete" onclick="delName()">
+            </div>
         <br>
         <!-- timestamp table-->
         <div class="row">
