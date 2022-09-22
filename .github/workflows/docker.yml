@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -25,7 +25,7 @@ jobs:
           context: web/.
           file: web/Dockerfile
           push: true
-          tags: wolf0110/eandon:latest
+          tags: wolf0110/bom-checker:latest
   notify:
     runs-on: ubuntu-latest
     if: always()
