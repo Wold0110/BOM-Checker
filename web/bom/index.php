@@ -5,17 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- bootstrap 5.1.3 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <!-- bootstrap 5.1.3 CSS-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen">
     <!-- css -->
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen">
     <link href="css/color.css" rel="stylesheet" type="text/css" media="screen">
-    
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
+ 
+    <!-- JQuery 3.6.0 -->
+    <script src="bom/js/jquery.min.js"></script>
+    <!-- bootstrap 5.1.3 JS -->
+    <script src="bom/js/bootstrap.bundle.min.js"></script>
     <!-- custom js -->
     <script src="bom/js/user.js"></script>
 
@@ -132,10 +131,5 @@
             </div>
     </div>
     <!-- #endregion -->
-
-    <!-- bootstrap 5.1.3 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
 </body>
 </html>

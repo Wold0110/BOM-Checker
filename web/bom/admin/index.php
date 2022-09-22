@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <!-- bootstrap 5.1.3 CSS-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen">
     <!-- css -->
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen">
     <link href="css/color.css" rel="stylesheet" type="text/css" media="screen">
-    
-    <!-- custom css -->
-    <script src="js/admin.js"></script> 
+ 
+    <!-- JQuery 3.6.0 -->
+    <script src="bom/js/jquery.min.js"></script>
+    <!-- bootstrap 5.1.3 JS -->
+    <script src="bom/js/bootstrap.bundle.min.js"></script>
+    <!-- custom js -->
+    <script src="bom/admin/js/admin.js"></script>
     
     <title>Admin page</title>
 </head>
