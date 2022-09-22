@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- bootstrap 5.1.3 CSS-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="bom/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen">
     <!-- css -->
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen">
-    <link href="css/color.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="bom/css/style.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="bom/css/color.css" rel="stylesheet" type="text/css" media="screen">
  
     <!-- JQuery 3.6.0 -->
     <script src="bom/js/jquery.min.js"></script>
