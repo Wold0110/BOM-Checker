@@ -1,6 +1,6 @@
 # BOM Checker v1.0
 
-![Main Screen](https://github.com/Wold0110/BOM-Checker/blob/main/img/main_screen.png?raw=true)
+![Main Screen](https://github.com/Wold0110/BOM-Checker/blob/main/web/bom/img/main_screen.png?raw=true)
 
 ## Containers
 > website               - from apache2 with php,php-mysqli  
