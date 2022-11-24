@@ -70,8 +70,10 @@ function timestampRef(){
     data.append("id",prodid);
     data.append("operator",operator);
     data.append("vez-kar",$("#vez-kar").find(":selected").val());
+    data.append("vez-kar2",$("#vez-kar").find(":selected").val());
     data.append("csomag",$("#csomag").find(":selected").val());
     data.append("kozpont",$("#kozpont").find(":selected").val());
+    data.append("kozpont2",$("#kozpont").find(":selected").val());
     
     
     for(var i = 1; i < 11; i++){

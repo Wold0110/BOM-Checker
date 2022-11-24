@@ -1,21 +1,18 @@
-# BOM Checker v1.0
+# BOM Checker v2.0
 
 ![Main Screen](https://github.com/Wold0110/BOM-Checker/blob/main/web/bom/img/main_screen.png?raw=true)
 
-## Containers
-> website               - from apache2 with php,php-mysqli  
-> mysql(compose)        - not exposed to public  
-> phpmyadmin(compose)   - port 81
----
+## How to run
+** Database is 
+`docker run -p *your_port*:80 -e TZ=*your_timezone* bomchecker`
 
 ## Database login
 > username: quality  
 > password: Qu4l1ty  
-> sql dump: [SQL DataDump](https://github.com/Wold0110/BOM-Checker/blob/main/sql_dump/data_dump.sql)
 ---
 
 ## [C# Tool to upload BOM](https://github.com/Wold0110/BOM-Uploader)
-## SQL Setup 2022-05-20
+## SQL Setup 2022-11-15 TODO: update
 <pre>
 products
     id          -   int
@@ -32,6 +29,7 @@ timestamps
     product_id  -   int
     timestamp   -   datetime
     operator    -   int
+    
 operator
     id          -   int
     name        -   text

@@ -96,8 +96,8 @@
                             </select> 
                         </div>
                             <?php
-                                $ids = array("vez-kar","kozpont","csomag");
-                                $texts = array("Vezérlőkar","Központi","Csomagoló");
+                                $ids = array("vez-kar","vez-kar2","kozpont","kozpont2","csomag");
+                                $texts = array("Vezérlőkar 1","Vezérlőkar 2","Központi 1","Központi 2","Csomagoló");
                                 operatorRow($ids,$texts,2);
                             ?>
                     </div>
