@@ -5,7 +5,7 @@
     $vezkar = $_POST['vez-kar'];
     $vezkar2 = $_POST['vez-kar2'];
     $kozpont = $_POST['kozpont'];
-    $kozpont2 = $_POST['kozponz2'];
+    $kozpont2 = $_POST['kozpont2'];
     $csomag = $_POST['csomag'];
 
     $op1 = $_POST['op-1'];
